@@ -1,0 +1,11 @@
+.button {
+	-fx-text-fill: white;
+	-fx-font-family: 'Lucida Console';
+	-fx-background-color: #FF8FD7;
+}
+
+.label {
+	-fx-font-family: 'Lucida Console';
+	-fx-text-fill: #360023;
+}
+
