@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiView">
+   <children>
+      <Label layoutX="208.0" layoutY="126.0" text="Type your expression here:" />
+      <TextField fx:id="enterExpression" layoutX="226.0" layoutY="140.0" />
+      <Button fx:id="enterButton" layoutX="278.0" layoutY="175.0" mnemonicParsing="false" onAction="#isPressed" text="Enter" />
+      <Label layoutX="239.0" layoutY="231.0" text="Answer:" />
+      <Label fx:id="displayAnswer" layoutX="341.0" layoutY="231.0" text="0" />
+      <Button fx:id="changeStack" layoutX="247.0" layoutY="313.0" mnemonicParsing="false" text="Change System" />
+      <Label layoutX="193.0" layoutY="347.0" text="Current System:" />
+      <Label fx:id="currentSystem" layoutX="324.0" layoutY="347.0" text="reverse polish" />
+   </children>
+</Pane>
