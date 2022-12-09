@@ -33,5 +33,9 @@ public class GuiView {
     displayAnswer.setText("1");
   }
   
+  String getExpression() {
+    return enterExpression.getText();
+  }
+  
 }
 
