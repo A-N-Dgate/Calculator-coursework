@@ -16,11 +16,6 @@ public class RevPolishCalc {
     calculatorStack = new Stack();
   }
   
-  //for testing purposes - delete
-  public int getSize() {
-    return this.calculatorStack.getSize();
-  }
-  
   private boolean isNumber(String num) {
     // need to check if the string is a number to create the entry instances
     try {
