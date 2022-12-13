@@ -26,13 +26,12 @@ public class RevPolishCalc {
     }
   }
 
-  private void fillStack(String expression) throws EmptyStackException{
+  private void fillStack(String expression) throws EmptyStackException {
     String[] exp = expression.split(" ");
 
     // this should be later changed to error checking
     if (exp.length == 3) {
       for (String item : exp) {
-        System.out.println(item);
         if (isNumber(item)) {
           Entry numEnt = new Entry(Integer.parseInt(item));
           this.calculatorStack.push(numEnt);
@@ -51,30 +50,38 @@ public class RevPolishCalc {
    * @param expression that will be evaluated
    * @return the answer to the expression
    */
-  @SuppressWarnings("preview")
+
   public float evaluate(String expression) {
     this.fillStack(expression);
 
     
-    //revPolish notation = num1 num2 symbol, therefore symbol is on the top
+    //revPolish notation = num1 num2 symbol, therefore symbol is on the top of the stack
     Symbol operation = this.calculatorStack.pop().getSymbol();
     int num2 = this.calculatorStack.pop().getValue();
     int num1 = this.calculatorStack.pop().getValue();
     
     float answer = 0;
     switch (operation) {
-      case PLUS: answer = num1 + num2;
+      case PLUS:
+        answer = num1 + num2;
         break;
-      case MINUS: answer = num1 - num2;
+      case MINUS:
+        answer = num1 - num2;
         break;
-      case TIMES: answer = num1 * num2;
+      case TIMES:
+        answer = num1 * num2;
         break;
-      case DIVIDE: answer = num1 / num2;
+      case DIVIDE:
+        answer = num1 / num2;
         break;
-      case default: answer = 0;
+      case LEFT_BRACKET:
+      case RIGHT_BRACKET:
+      case INVALID:
+        answer = 0;
     }
     
     return answer;
+    
 
   }
 

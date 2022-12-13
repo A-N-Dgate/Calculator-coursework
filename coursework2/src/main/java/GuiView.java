@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
  *
  */
 public class GuiView {
-  
+
   @FXML
   private Button changeStack;
 
@@ -30,12 +30,15 @@ public class GuiView {
 
   @FXML
   void isPressed(ActionEvent event) {
-    displayAnswer.setText("1");
+    RevPolishCalc calc = new RevPolishCalc();
+    float answer = calc.evaluate(getExpression());
+    String displayString = Float.toString(answer);
+    displayAnswer.setText(displayString);
   }
-  
+
   String getExpression() {
     return enterExpression.getText();
   }
-  
+
 }
 
