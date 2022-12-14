@@ -51,12 +51,12 @@ public class RevPolishCalc {
    * @return the answer to the expression
    */
 
-  public float evaluate(String expression) {
+  public double evaluate(String expression) {
     this.fillStack(expression);
 
 
     // revPolish notation = num1 num2 symbol, therefore symbol is on the top of the stack
-    float answer = 0;
+    double answer = 0;
     try {
       Symbol operation = this.calculatorStack.pop().getSymbol();
       int num2 = this.calculatorStack.pop().getValue();

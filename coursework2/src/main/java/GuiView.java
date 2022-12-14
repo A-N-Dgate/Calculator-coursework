@@ -32,8 +32,8 @@ public class GuiView {
 
   @FXML
   void isPressed(ActionEvent event) {
-    float answer = calc.evaluate(getExpression());
-    String displayString = Float.toString(answer);
+    double answer = calc.evaluate(getExpression());
+    String displayString = Double.toString(answer);
     displayAnswer.setText(displayString);
   }
 
