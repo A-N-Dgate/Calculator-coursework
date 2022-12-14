@@ -15,7 +15,7 @@ public class RevPolishCalc {
   public RevPolishCalc() {
     calculatorStack = new Stack();
   }
-  
+
   private boolean isNumber(String num) {
     // need to check if the string is a number to create the entry instances
     try {
@@ -54,34 +54,38 @@ public class RevPolishCalc {
   public float evaluate(String expression) {
     this.fillStack(expression);
 
-    
-    //revPolish notation = num1 num2 symbol, therefore symbol is on the top of the stack
-    Symbol operation = this.calculatorStack.pop().getSymbol();
-    int num2 = this.calculatorStack.pop().getValue();
-    int num1 = this.calculatorStack.pop().getValue();
-    
-    // There's some sort of error/ not working with maven that happens when there is a default case
-    // so I removed it :)
+
+    // revPolish notation = num1 num2 symbol, therefore symbol is on the top of the stack
     float answer = 0;
-    switch (operation) {
-      case PLUS:
-        answer = num1 + num2;
-        break;
-      case MINUS:
-        answer = num1 - num2;
-        break;
-      case TIMES:
-        answer = num1 * num2;
-        break;
-      case DIVIDE:
-        answer = num1 / num2;
-        break;
-      default:
-        answer = 0;
+    try {
+      Symbol operation = this.calculatorStack.pop().getSymbol();
+      int num2 = this.calculatorStack.pop().getValue();
+      int num1 = this.calculatorStack.pop().getValue();
+
+
+      switch (operation) {
+        case PLUS:
+          answer = num1 + num2;
+          break;
+        case MINUS:
+          answer = num1 - num2;
+          break;
+        case TIMES:
+          answer = num1 * num2;
+          break;
+        case DIVIDE:
+          answer = num1 / num2;
+          break;
+        default:
+          answer = 0;
+      }
+
+    } catch (Exception e) {
+      answer = 0;
     }
-    
+
     return answer;
-    
+
 
   }
 

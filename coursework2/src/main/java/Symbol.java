@@ -7,8 +7,8 @@
  * @author Anusha Din
  */
 public enum Symbol {
-  LEFT_BRACKET("Left bracket"), RIGHT_BRACKET("Right bracket"), TIMES("Times"), DIVIDE(
-      "Divide"), PLUS("Plus"), MINUS("Minus"), INVALID("Invalid");
+  LEFT_BRACKET("left bracket"), RIGHT_BRACKET("right bracket"), TIMES("times"), DIVIDE(
+      "divide"), PLUS("plus"), MINUS("minus"), INVALID("invalid");
 
   private String name;
 
@@ -49,7 +49,7 @@ public enum Symbol {
     Symbol[] symbols = getAllSymbols();
 
     for (Symbol symbol : symbols) {
-      if (symbol.toString().equals(symbolName)) {
+      if (symbol.toString().equals(symbolName.toLowerCase())) {
         returnSymbol = symbol;
       }
     }

@@ -35,7 +35,7 @@ class RevPolishCalcTest {
   void testInvalid() {
     //operator has to have a capital letter to match with enum
     RevPolishCalc calc = new RevPolishCalc();
-    float answer = calc.evaluate("4 5 times");
+    float answer = calc.evaluate("4 times 5");
     assertEquals(0, answer);
   }
 }
