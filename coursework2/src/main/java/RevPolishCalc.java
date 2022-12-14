@@ -60,6 +60,8 @@ public class RevPolishCalc {
     int num2 = this.calculatorStack.pop().getValue();
     int num1 = this.calculatorStack.pop().getValue();
     
+    // There's some sort of error/ not working with maven that happens when there is a default case
+    // so I removed it :)
     float answer = 0;
     switch (operation) {
       case PLUS:
@@ -74,9 +76,7 @@ public class RevPolishCalc {
       case DIVIDE:
         answer = num1 / num2;
         break;
-      case LEFT_BRACKET:
-      case RIGHT_BRACKET:
-      case INVALID:
+      default:
         answer = 0;
     }
     

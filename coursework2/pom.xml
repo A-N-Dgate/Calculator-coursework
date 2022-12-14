@@ -99,7 +99,7 @@
 			<configuration>
 				<configLocation>/src/main/resources/googlePlus.xml</configLocation>
 				<consoleOutput>true</consoleOutput>
-				<failsOnError>false</failsOnError>
+				<failsOnError>true</failsOnError>
 				<violationSeverity>warining</violationSeverity>
 				<linkXRef>false</linkXRef>
 			</configuration>
