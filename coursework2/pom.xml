@@ -8,8 +8,8 @@
 
 <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
 <dependencies>
@@ -70,7 +70,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.8.0</version>
         <configuration>
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -100,7 +100,7 @@
 				<configLocation>/src/main/resources/googlePlus.xml</configLocation>
 				<consoleOutput>true</consoleOutput>
 				<failsOnError>true</failsOnError>
-				<violationSeverity>warning</violationSeverity>
+				<violationSeverity>warining</violationSeverity>
 				<linkXRef>false</linkXRef>
 			</configuration>
 			<executions>

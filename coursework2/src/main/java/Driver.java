@@ -16,7 +16,7 @@ public class Driver extends Application {
   /**
    * Main method to start the Javafx (GUI) program.
    * 
-   * @param args arguments from the command line
+   * @param args arguments from the command line, if any.
    */
   public static void main(String[] args) {
     launch(args);

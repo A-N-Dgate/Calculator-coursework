@@ -7,7 +7,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiView">
    <children>
-      <Label layoutX="208.0" layoutY="126.0" text="Type your expression here:" />
+      <Label layoutX="229.0" layoutY="123.0" text="Type your expression here:" />
       <TextField fx:id="enterExpression" layoutX="226.0" layoutY="140.0" />
       <Button fx:id="enterButton" layoutX="278.0" layoutY="175.0" mnemonicParsing="false" onAction="#isPressed" text="Enter" />
       <Label layoutX="239.0" layoutY="231.0" text="Answer:" />
