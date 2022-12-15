@@ -1,0 +1,5 @@
+This release of the calculator will only use reverse polish notation when entering an expresion 
+into the calculator; if this notation isn't used, the answer will either stay as the previous
+answer or 0. The change system button doesn't do anything. System tests have been done to show 
+that an accurate answer can be displayed when the answer is below 11 digits, and turns to scientific 
+notation at around 8 digits for the answer, if I remember correctly.
