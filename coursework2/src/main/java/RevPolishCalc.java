@@ -6,14 +6,24 @@ import java.util.EmptyStackException;
  * @author Anusha Din
  *
  */
-public class RevPolishCalc {
+public final class RevPolishCalc {
   private Stack calculatorStack;
+  private static RevPolishCalc calc = new RevPolishCalc();
 
   /**
    * Constructor for the class, taking no parameters.
    */
-  public RevPolishCalc() {
+  private RevPolishCalc() {
     calculatorStack = new Stack();
+  }
+  
+  /**
+   * Method to return the calculator instance.
+   * 
+   * @return a calculator which works in the reverse polish notation
+   */
+  public static RevPolishCalc getCalc() {
+    return calc;
   }
 
   private boolean isNumber(String num) {
